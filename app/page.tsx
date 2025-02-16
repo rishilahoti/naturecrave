@@ -3,6 +3,7 @@ import Footer from '@/components/footer';
 import About from '@/components/about';
 import Products from '@/components/products';
 
+
 export default function Home() {
 	return (
 		<div className="relative min-h-screen">

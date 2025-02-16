@@ -8,7 +8,7 @@ html {
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-    font-feature-settings: "ss01" on, "ss02" on, "ss03" on, "ss04" on, "ss05" on;
+	font-feature-settings: 'ss01' on, 'ss02' on, 'ss03' on, 'ss04' on, 'ss05' on;
 }
 
 @layer utilities {

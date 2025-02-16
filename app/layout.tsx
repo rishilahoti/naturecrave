@@ -1,33 +1,30 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { Inter } from 'next/font/google';
+import type React from 'react';
+import type { Metadata } from 'next';
+import MouseMoveEffect from '@/components/mouse-move-effect';
+import Navbar from '@/components/navbar';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: 'Nature Crave',
 	description:
-		'We are dedicated to providing high-quality, nutrient-rich products that support healthy living and sustainability, ensuring freshness and purity in every pack.',
+		'At Nature Crave we of er premium, natural products like chia, flax, and quinoa,etc.',
 };
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode;
-}>) {
+}) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`${inter.className} bg-background text-foreground antialiased`}
 			>
+				<MouseMoveEffect />
+				<Navbar />
 				{children}
 			</body>
 		</html>
